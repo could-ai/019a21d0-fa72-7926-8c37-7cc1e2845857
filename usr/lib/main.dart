@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
 
 void main() {
-  runApp(const KisanSetuApp());
+  runApp(const MyApp());
 }
 
-class KisanSetuApp extends StatelessWidget {
-  const KisanSetuApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'KisanSetu - Direct Farmer to Consumer Marketplace',
+      title: 'KisanSetu',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.green, // Green theme for agricultural focus
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
       home: const HomeScreen(),
     );
